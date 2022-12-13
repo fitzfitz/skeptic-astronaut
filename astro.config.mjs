@@ -4,6 +4,6 @@ import preact from "@astrojs/preact";
 import tailwind from "@astrojs/tailwind";
 
 export default defineConfig({
-  base: "./",
+  site: "https://fitzfitz.github.io",
   integrations: [preact(), tailwind()],
 });
