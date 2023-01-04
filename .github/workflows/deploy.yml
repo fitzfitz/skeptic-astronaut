@@ -39,8 +39,7 @@ jobs:
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@v4
         with:
-          access_token: ${{ secrets.ACCESS_TOKEN }}
+          ssh-key: ${{ secrets.ACCESS_TOKEN }}
           folder: dist
-          base_branch: main
           branch: gh-pages
           clean: true
