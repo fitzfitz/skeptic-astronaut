@@ -32,8 +32,8 @@ const ChatBox: FunctionComponent = () => {
   };
 
   const fetchData = async (chatList: Chats[]) => {
-    const baseUrl = "http://localhost:5000";
-    // const baseUrl = "https://fitzai.themonograf.com";
+    // const baseUrl = "http://localhost:5000";
+    const baseUrl = "https://fitzai.themonograf.com";
 
     await fetch(`${baseUrl}/ask-fitz`, {
       method: "POST",
