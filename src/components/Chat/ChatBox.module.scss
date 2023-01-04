@@ -1,0 +1,24 @@
+.chatBox {
+  @apply flex h-full max-h-[40rem] w-full max-w-sm flex-col space-y-4 overflow-hidden;
+}
+.chatBoxBody {
+  @apply flex h-0 flex-1 flex-col rounded bg-sky-100 text-[var(--color-main-black)];
+}
+.chatBoxHeader {
+  // @apply;
+}
+.chatBoxContent {
+  @apply flex-1 overflow-y-auto overflow-x-hidden p-2;
+}
+.chatBoxForm {
+  @apply flex items-center space-x-3;
+}
+.formInput {
+  @apply relative flex-1 leading-none;
+}
+.formInput input {
+  @apply min-h-[2.75rem] w-full resize-none rounded p-3 pr-9 text-[var(--color-main-black)] outline-none;
+}
+.buttonSend {
+  @apply absolute right-0 h-11 px-3;
+}

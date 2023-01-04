@@ -1,0 +1,23 @@
+.messageContainer {
+  @apply flex;
+}
+.messageHuman {
+  @apply justify-end;
+}
+.messageAI {
+}
+.messageContent {
+  @apply mb-1 w-fit max-w-[95%] whitespace-pre-line rounded-3xl px-4 py-2 text-[13px] font-bold;
+}
+.messageHuman .messageContent {
+  @apply rounded-tr-none bg-gradient-to-tr from-[#a629fd] to-[#7290ff] text-white;
+}
+.messageAI .messageContent {
+  @apply rounded-tl-none bg-gradient-to-tl from-[#008f6c] to-[#10a37f]  text-white;
+}
+.user {
+  // @apply;
+}
+.message {
+  // @apply;
+}

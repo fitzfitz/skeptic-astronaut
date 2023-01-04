@@ -1,10 +1,9 @@
 ---
+import Main from '../app/layout/Main';
+import Homepage from '../components/Homepage/Homepage';
 import Layout from '../layouts/Layout.astro';
-import styles from "./home.module.scss"
 ---
 
 <Layout pageTitle="Home">
-	<main class={styles.root}>
-		<span class={styles.text}>Fitzgeral</span>
-	</main>
+	<Homepage />
 </Layout>

@@ -1,0 +1,14 @@
+---
+import Main from '../../app/layout/Main';
+import ChatBox from '../../components/Chat/ChatBox';
+import Layout from '../../layouts/Layout.astro';
+import styles from "./askFitz.module.scss"
+---
+
+<Layout pageTitle="Playground">
+	<Main>
+    <div class={styles.root}>
+      <ChatBox client:load />
+    </div>
+	</Main>
+</Layout>
