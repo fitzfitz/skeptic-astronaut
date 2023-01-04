@@ -36,11 +36,6 @@ jobs:
           pnpm i
           pnpm build
 
-      - name: Upload artifact
-        uses: actions/upload-pages-artifact@v1
-        with:
-          path: ./dist
-
   deploy:
     environment:
       name: github-pages
@@ -51,5 +46,5 @@ jobs:
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@v4
         with:
-          folder: build
+          folder: dist
           clean: true
