@@ -30,8 +30,20 @@ jobs:
           pnpm i
           pnpm build
 
-      - name: Deploy 🚀
-        uses: JamesIves/github-pages-deploy-action@v4
+      - name: Deploy to another repository 🚀
+        uses: cpina/github-action-push-to-another-repository@main
+        env:
+          SSH_DEPLOY_KEY: ${{ secrets.DEPLOY_KEY }}
+          API_TOKEN_GITHUB: ${{ secrets.GITHUB_TOKEN }}
         with:
-          folder: dist
-          branch: gh-pages
+          source-directory: "dist"
+          destination-github-username: "fitzfitz"
+          destination-repository-name: "fitzfitz.github.io"
+          user-email: fitzgeralmedia@gmail.com
+          target-branch: main
+
+      # - name: Deploy 🚀
+      #   uses: JamesIves/github-pages-deploy-action@v4
+      #   with:
+      #     folder: dist
+      #     branch: gh-pages
