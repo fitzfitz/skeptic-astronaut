@@ -1,4 +1,4 @@
-Astro app
+Astro + Preact app
 
 
-### git subtree push --prefix dist origin gh-pages
+### This is the base code for my GitHub Pages, and the build is on another repository.
