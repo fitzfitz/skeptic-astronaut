@@ -1,8 +1,7 @@
 export default {
-  siteTitle: "Fitz's",
+  siteTitle: "Fitz's Playground",
   siteDescription: "Don't mind me, lol",
   favicon: "/favicon.ico",
-  siteImagePath: "/images/sarissa.png",
   footer: "© 1995 - 2022 Fitz's",
   dateFormat: "dd.MM.yyyy HH:mm",
   socialMedia: {
