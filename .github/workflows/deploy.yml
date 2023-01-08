@@ -3,6 +3,7 @@ on:
   # Trigger the workflow every time you push to the `main` branch
   push:
     branches: [main]
+
   # Allows you to run this workflow manually from the Actions tab on GitHub.
   workflow_dispatch:
 
@@ -24,7 +25,6 @@ jobs:
         with:
           node-version: "16"
 
-      # Not using npm? Change `npm ci` to `yarn install` or `pnpm i`
       - name: Install dependencies
         run: |
           pnpm i
@@ -37,13 +37,7 @@ jobs:
           API_TOKEN_GITHUB: ${{ secrets.GITHUB_TOKEN }}
         with:
           source-directory: "dist"
-          destination-github-username: "fitzfitz"
-          destination-repository-name: "fitzfitz.github.io"
-          user-email: fitzgeralmedia@gmail.com
+          destination-github-username: ${{github.actor}}
+          destination-repository-name: ${{env.TARGET_BRANCH_DEPLOY}}
+          user-email: ${{env.USER_EMAIL}}
           target-branch: main
-
-      # - name: Deploy 🚀
-      #   uses: JamesIves/github-pages-deploy-action@v4
-      #   with:
-      #     folder: dist
-      #     branch: gh-pages

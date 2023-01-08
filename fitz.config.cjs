@@ -1,5 +1,5 @@
 export default {
-  siteTitle: "Fitz's Playground",
+  siteTitle: "Fitz's Wrap",
   siteDescription: "Don't mind me, lol",
   favicon: "/favicon.ico",
   footer: "© 1995 - 2022 Fitz's",
