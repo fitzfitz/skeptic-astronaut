@@ -12,6 +12,12 @@ jobs:
     name: Build App
     runs-on: ubuntu-latest
     steps:
+      - name: Show GitHub context   
+        env: 
+          GITHUB_CONTEXT: ${{ toJson(github) }}   
+          run: echo "$GITHUB_CONTEXT"
+          shell: bash
+          
       - name: Check out your repository using git
         uses: actions/checkout@v2
 
@@ -37,7 +43,7 @@ jobs:
           API_TOKEN_GITHUB: ${{ secrets.GITHUB_TOKEN }}
         with:
           source-directory: "dist"
-          destination-github-username: ${{github.actor}}
-          destination-repository-name: ${{secrets.TARGET_BRANCH_DEPLOY}}
-          user-email: ${{secrets.USER_EMAIL}}
+          destination-github-username: ${{ github.actor }}
+          destination-repository-name: ${{ secrets.TARGET_BRANCH_DEPLOY }}
+          user-email: ${{ secrets.USER_EMAIL }}
           target-branch: main
