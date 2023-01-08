@@ -38,6 +38,6 @@ jobs:
         with:
           source-directory: "dist"
           destination-github-username: ${{github.actor}}
-          destination-repository-name: ${{env.TARGET_BRANCH_DEPLOY}}
-          user-email: ${{env.USER_EMAIL}}
+          destination-repository-name: ${{secrets.TARGET_BRANCH_DEPLOY}}
+          user-email: ${{secrets.USER_EMAIL}}
           target-branch: main
